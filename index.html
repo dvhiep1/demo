@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>XSS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <style>
+  .title {
+    color: red;
+  }
+  </style>
+  <body>
+    <div class="XSS">
+      <h1 class="title">Cross-site scripting</h1>
+      <p>- XSS: Là 1 cách tấn công bằng đoạn mã độc phổ biến các hacker sẽ lợi dụng lỗ hổng bảo mật trong web để chèn các mã script và gửi cho người dùng truy cập và mạo danh người dùng</p>
+      <p>- Mục đích là đánh cắp dữ liệu nhận dạng của người dùng như session tokens, cookies và các thông tin khác.</p>
+      <h3 class="title">Cách hoạt động của XSS</h3>
+      <p>- Nó gửi chèn lệnh và script độc hại, những mã đôc hại này thường được viết bằng các ngôn ngữ lập trình phía client như JavaScript, VBScript, Flash, HTML,… Và cách tấn công này thường sử dụng JavaScript và HTML.</p>
+      <p>- Nó điều khiển một trang web dễ bị tấn công để trả về JavaScript độc hại cho người dùng. Khi mã độc thực thi bên trong trình duyệt, hacker hoàn toàn có thể xâm nhập vào tài khoản và sử dụng dữ liệu của người dùng.</p>
+      <h3 class="title">Có 3 loại tấn công XSS</h3>
+      <p>- Reflected XSS là hình thức tấn công được sử dụng nhiều nhất. Đây là nơi mã script độc hại đến từ HTTP request. Từ đó, hacker đánh cắp dữ liệu của người dùng, <br>chiếm quyền truy cập và hoạt động của họ trên website thông qua việc chia sẻ URL chứa mã độc(hình thức tấn công này thì thường nhằm đến ít nạn nhân).</p>
+      <img src="https://vietnix.vn/wp-content/uploads/2022/03/reflected-xss.webp" alt="">
+      <p>- Stored XSS là nơi script độc hại đến từ cơ sở dữ liệu của trang web. Hacker chèn các mã độc vào cơ sở dữ liệu thông qua các dữ liệu đầu vào như input, form,… <br>Khi người dùng truy cập và tiến hành những thao tác liên quan đến dữ liệu đã lưu thì mã độc sẽ lập tức hoạt động trên trình duyệt(hình thức tấn công này thì thường nhằm đến nhiều nạn nhân cùng lúc)</p>
+      <img src="https://vietnix.vn/wp-content/uploads/2022/03/stored-xss.webp" alt="">
+      <p>- DOM-based XSS là nơi lỗ hổng bảo mật tồn tại trong mã phía client chứ không phải mã phía server. Hình thức này dùng để khai thác XSS dựa vào việc thay đổi HTML của tài liệu, hay nói cách khác là thay đổi cấu trúc DOM.</p>
+      <h3 class="title">XSS có thể làm gì</h3>
+      <ul>
+        <li>Mạo danh hoặc giả dạng người dùng.</li>
+        <li>Thực hiện bất kỳ hành động nào mà người dùng có thể thực hiện.</li>
+        <li>Đọc bất kỳ dữ liệu nào mà người dùng có thể truy cập.</li>
+        <li>Nắm bắt thông tin đăng nhập của người dùng</li>
+        <li>Thực hiện thay đổi bề mặt ảo của trang web.</li>
+        <li>Chèn các đường link độc hại vào trang web.</li>
+      </ul>
+      <h3 class="title">Cách ngăn chặn tấn công XSS</h3>
+      <ul>
+        <li>Data validation(Kiểm tra dữ liệu đầu vào)</li>
+        <li>Filtering(Lọc thông tin đầu vào)</li>
+        <li>Escaping(ký tự đặc biệt)</li>
+      </ul>
+    </div>
+  </body>
+</html>

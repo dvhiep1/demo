@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Flex-Box</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+  <div class="container">
+    <h1>FlexBox</h1>
+    <p>flexbox là 1 chiều của layout pattern giúp ta phân chia không gian giữ các items và căn chỉnh các vùng chứa và <br>sắp xếp từ trái sang phải từ trên xuống dưới và khoảng cách thứ tự các items trong vùng chứa nó</p>
+    <h3>cấu trúc của flexBox</h3>
+    <img src="https://images.viblo.asia/0c116fbb-972d-4162-8506-bac8605cd704.png" alt="">
+    <h3>chú thích:</h3>
+    <ul>
+      <li>main start: Điểm bắt đầu của container theo main axis</li>
+      <li>main end: điểm kết thúc của container theo main axis</li>
+      <li>cross start: Điểm bắt đầu của container theo cross axis</li>
+      <li>cross end: điểm kết thúc của container theo cross axis</li>
+      <li>main axis: Trục này chính là hướng của các item hiển thị, mặc định thì sẽ chạy từ trái qua phải</li>
+      <li>cross axis: Trục này vuông góc với main axis, chạy từ trên xuống dưới</li>
+      <li>main size: Là kích thước của mỗi item dựa theo trục main axis.</li>
+      <li>cross size: Là kích thước của mỗi item dựa theo trục cross axis.</li>
+    </ul>
+    <h3>Các thuộc tính của flex container</h3>
+    <ul>
+      <li>display là thuộc tính bắt buộc phải có trong flex-container</li>
+      <li>flex-direction dùng để chỉ định hướng hiển thì của các item, việc thay đổi hướng hiển thị flex cũng thể có thể cho phép ta thay đổi vị trí của các flex item với 1 số thuộc tính
+        <p>+ flex-direction: row; chỉ đặt các item từ trái qua phải</p>
+        <p>+ flex-direction: row-reverse; chỉ đặt các item từ phải qua trái</p>
+        <p>+ flex-direction: column; các item sẽ đi từ trên xuống dưới</p>
+        <p>+ flex-direction: column-reverse; các item sẽ đi từ dưới lên</p>
+      </li>
+      <li>flex-wrap dùng để kiểm soát việc bọc các items nằm gọn trong flex-container. với 1 số thuộc tính
+        <p>+ flex-wrap: nowrap; giá trị mặc định và không có gì thay đổi</p>
+        <p>+ flex-wrap: wrap; các item đc nằm ở trong flex-container khi các item nhiều và tự xuống dòng </p>
+        <p>+ flex-wrap: wrap-reverse; các item đc ở trong flex-container khi các item nhiều và tự xuống dòng nhưng ngược lại vs flex-wrap: wrap;</p>
+      </li>
+      <li>flex-flow viết gọn của flex-direction và flex-wrap </li>
+      <li>justified-content dùng để căn chỉnh vị trí của các items 
+        <p>+ flex-end:sẽ đặt item bắt đầu từ main end</p>
+        <p>+ center: sẽ đặt tất cả item ở giữa trục main axis</p>
+        <p>+ space-between: sẽ chia đều khoảng cách thừa và thêm nó vào giữa các item</p>
+        <p>+ space-around: sẽ chia khoảng cách ở đầu và cuối. Khoảng cách ở đầu và cuối sẽ bằng 1 nửa khoảng cách ở giữa 2 item với nhau</p>
+        <p>+ space-evenly: sẽ chia khoảng cách đều khoảng cách giữa các item với item, item và main start, item với main end bằng nhau</p>
+      </li>
+      <li>align-items dùng để xác định các item được đặt trong flex-container dọc theo chiều cross axis
+        <p>+ align-items: stretch; Chiều dài của item sẽ bằng chiều dài của cross axis</p>
+        <p>+ align-items: flex-start; Item được đặt ở điểm bắt đầu của cross start(trên cùng bên trái), và kích thước item không bị thay đổi.</p>
+        <p>+ align-items: flex-end; Item được đặt ở điểm bắt đầu của cross end</p>
+        <p>+ align-items: center; Item được đặt ở giữa điểm bắt đầu của cross start và điểm bắt đầu của cross end </p>
+        <p>+ align-items: baseline; Item sẽ được đặt dữ theo các ký tự thuộc item đó( chủ yếu để dùng căn chỉnh dòng của các đoạn văn bản trong item)</p>
+      </li>
+      <li>align-content dùng để xác định các item được đặt trong flex-container căn theo trục cros axis
+        <p>+ align-content: stretch;</p>
+        <p>+ align-content: flex-start;</p>
+        <p>+ align-content: flex-end;</p>
+        <p>+ align-content: center;</p>
+        <p>+ align-content: space-between;</p>
+        <p>+ align-content: space-around;</p>
+      </li>
+    </ul>
+    <div class="flex-container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+      <div class="item">7</div>
+      <div class="item">8</div>
+      <div class="item">9</div>
+      <div class="item">10</div>
+      <div class="item">11</div>
+      <div class="item">12</div>
+    </div>
+  </div>
+  </body>
+</html>
