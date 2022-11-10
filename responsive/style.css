@@ -1,0 +1,17 @@
+h1, h3 {
+  color: red;
+}
+p {
+  font-size: 18px;
+}
+.responsive {
+  padding: 0 0 0 20px;
+}
+@media only all and (max-width:768px) {
+  p {
+    color: blue;
+  }
+  img {
+    width: 100%;
+  }
+}
